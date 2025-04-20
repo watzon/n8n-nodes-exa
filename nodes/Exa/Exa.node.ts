@@ -4,6 +4,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	NodeConnectionType
 } from 'n8n-workflow';
 import Exa from 'exa-js';
 
@@ -19,8 +20,8 @@ export class ExaNode implements INodeType {
 		defaults: {
 			name: 'Exa',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
 				name: 'exaApi',
