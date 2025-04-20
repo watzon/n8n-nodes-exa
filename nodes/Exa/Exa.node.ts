@@ -20,8 +20,8 @@ export class ExaNode implements INodeType {
 		defaults: {
 			name: 'Exa',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [
 			{
 				name: 'exaApi',
