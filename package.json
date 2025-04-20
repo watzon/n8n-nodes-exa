@@ -1,15 +1,18 @@
 {
   "name": "n8n-nodes-exa",
-  "version": "0.1.0",
-  "description": "n8n node for interacting with the Exa API",
+  "version": "0.2.0",
+  "description": "n8n node to interact with the Exa API",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "exa",
+    "ai",
+    "llm"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/watzon/n8n-nodes-exa#readme",
   "author": {
     "name": "Chris Watson",
-    "email": "cawatson1993@gmail.com"
+    "email": "chris@watzon.tech"
   },
   "repository": {
     "type": "git",
@@ -43,8 +46,9 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^18.19.76",
     "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^4.0.2",
     "n8n-core": "1.11.1",
@@ -52,11 +56,11 @@
     "prettier": "^3.5.2",
     "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "exa-js": "^1.0.8"
-  },
   "peerDependencies": {
     "n8n-core": "*",
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "exa-js": "^1.6.13"
   }
 }

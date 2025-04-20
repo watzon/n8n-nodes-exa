@@ -397,3 +397,9 @@ export class ExaNode implements INodeType {
 		return [this.helpers.returnJsonArray(returnData)];
 	}
 }
+
+// Add default export
+export default ExaNode;
+
+// Export named alias for n8n loader
+export { ExaNode as Exa };
