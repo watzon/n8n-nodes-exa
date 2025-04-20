@@ -35,11 +35,15 @@ export class ExaApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://api.exa.ai',
-			url: '/search',
+			url: '/contents',
 			method: 'POST',
+			headers: {
+				'x-api-key': '={{$credentials.apiKey}}',
+				'Content-Type': 'application/json',
+			},
 			body: {
-				query: 'test query',
-				numResults: 1,
+				urls: ['https://example.com'],
+				text: true,
 			},
 		},
 	};
