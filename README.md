@@ -1,46 +1,94 @@
 ![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
 
-# n8n-nodes-starter
+# n8n-nodes-exa
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](n8n.io). It includes the node linter and other dependencies.
+This is an n8n community node for interacting with the [Exa API](https://docs.exa.ai/). It provides functionality to search, find similar content, get content, and get answers using Exa's powerful AI capabilities.
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+## Installation
 
-## Prerequisites
+Follow these steps to install this node in your n8n instance:
 
-You need the following installed on your development machine:
+1. Go to **Settings > Community Nodes**
+2. Select **Install Another Node**
+3. Enter `n8n-nodes-exa`
+4. Click **Install**
 
-* [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 18. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  pnpm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+Alternatively, you can install it using npm:
 
-## Using this starter
+```bash
+npm install n8n-nodes-exa
+```
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+## Operations
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `pnpm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `pnpm lint` to check for errors or `pnpm lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+The Exa node supports the following operations:
 
-## More information
+### Search
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+- **Search**: Search for content across the web
+- **Search and Get Contents**: Search and retrieve the content of the results
+
+Additional options:
+- Use autoprompt
+- Number of results
+- Date filters
+- Domain filters
+
+### Find Similar
+
+- **Find Similar**: Find content similar to a given URL
+- **Find Similar and Get Contents**: Find similar content and retrieve it
+
+Additional options:
+- Exclude source domain
+- Number of results
+
+### Get Content
+
+- **Get Contents**: Get the content of specified URLs
+
+### Answer
+
+- **Get Answer**: Get an AI-generated answer to a question
+
+Additional options:
+- Include source text
+- Choose model (Default or Exa Pro)
+
+## Credentials
+
+To use this node, you need an Exa API key. You can get one by:
+
+1. Going to [Exa's website](https://exa.ai)
+2. Creating an account
+3. Getting your API key from the dashboard
+
+## Example Usage
+
+1. **Simple Search**
+   - Add the Exa node
+   - Select "Search" as the resource
+   - Enter your search query
+   - Run the workflow
+
+2. **Find Similar Content**
+   - Add the Exa node
+   - Select "Find Similar" as the resource
+   - Enter the URL you want to find similar content for
+   - Run the workflow
+
+3. **Get Answer with Sources**
+   - Add the Exa node
+   - Select "Answer" as the resource
+   - Enter your question
+   - Enable "Include Text" in additional fields to get source information
+   - Run the workflow
+
+## Resources
+
+- [Exa API Documentation](https://docs.exa.ai/)
+- [n8n Community Nodes Documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 ## License
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+[MIT](LICENSE.md)

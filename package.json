@@ -1,19 +1,19 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-exa",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n node for interacting with the Exa API",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Chris Watson",
+    "email": "cawatson1993@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/watzon/n8n-nodes-exa.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -36,12 +36,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/ExaApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/Exa/Exa.node.js"
     ]
   },
   "devDependencies": {
@@ -52,7 +50,9 @@
     "prettier": "^3.3.2",
     "typescript": "^5.5.3"
   },
-  "peerDependencies": {
-    "n8n-workflow": "*"
+  "dependencies": {
+    "exa-js": "^1.0.8",
+    "n8n-core": "^1.14.1",
+    "n8n-workflow": "^1.82.0"
   }
 }
