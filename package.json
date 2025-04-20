@@ -52,7 +52,9 @@
   },
   "dependencies": {
     "exa-js": "^1.0.8",
-    "n8n-core": "^1.14.1",
-    "n8n-workflow": "^1.82.0"
+    "n8n-core": "^1.14.1"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
   }
 }

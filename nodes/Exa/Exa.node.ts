@@ -4,7 +4,6 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeConnectionType
 } from 'n8n-workflow';
 import Exa from 'exa-js';
 
